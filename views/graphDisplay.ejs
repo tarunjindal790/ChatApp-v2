@@ -1,0 +1,46 @@
+<html>
+    <head>
+    
+      <title></title>
+    
+    </head>
+    
+    <body>
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+    
+    function setup(){
+        var canvas=createCanvas(1200,600);
+        // canvas.parent('sketch-div');
+        background(32);
+        fill(255,204,0);
+        ellipse(600,300,50,50);
+        noLoop();
+        }
+
+    function draw(){
+        fill(255);
+        console.log("Again");
+        for(var i=0;i<<%=nodes%>;i++){
+            // ellipse(Math.floor(Math.random()*400),Math.floor(Math.random()*400),25,25);
+            x=random(0,1200);
+            y=random(0,600);
+            ellipse(x,y,25,25);
+            strokeWeight(4);
+            stroke(255);
+            line(600,300,x,y);
+            // console.log(<%=nodes%>);
+            // ellipse(200+10*i,200+10*i,25,25);
+        }
+        
+    }
+    
+
+    //till here   
+</script>
+
+</body>
+</html>                 
